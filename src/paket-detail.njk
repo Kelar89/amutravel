@@ -1,0 +1,90 @@
+---
+pagination:
+  data: paket
+  size: 1
+  alias: pkg
+  tags: paket
+permalink: "paket/{{ pkg.id }}/"
+layout: "base.njk"
+title: "{{ pkg.nama }}"
+---
+
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-7">
+      <img src="{{ pkg.image_url }}" alt="{{ pkg.nama }}" class="img-fluid rounded shadow mb-4">
+    </div>
+    <div class="col-lg-5">
+      <h1 class="fw-bold">{{ pkg.nama }}</h1>
+      <h2 class="text-primary fw-bold">{{ pkg.harga_str }}</h2>
+      <p class="text-muted">Untuk keberangkatan tanggal {{ pkg.keberangkatan }}</p>
+
+      <div class="card bg-light border-0 shadow-sm mb-4">
+        <div class="card-body text-center">
+          <h6 class="card-title">Sisa Waktu Pendaftaran</h6>
+          <div 
+            id="countdown-timer" 
+            class="d-flex justify-content-center fw-bold fs-5" 
+            data-end-date="{{ pkg.keberangkatan | dateStringToISO }}">
+            </div>
+        </div>
+      </div>
+      <a href="https://wa.me/6285894448143?text=Assalamualaikum,%20saya%20tertarik%20dengan%20Paket%20{{ pkg.nama | url_encode }}" target="_blank" class="btn btn-success btn-lg w-100 mb-4">
+        Daftar via WhatsApp Sekarang
+      </a>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Durasi
+          <span class="badge bg-primary rounded-pill">{{ pkg.durasi }}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Maskapai
+          <span class="badge bg-primary rounded-pill">{{ pkg.maskapai }}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Hotel Makkah
+          <span class="badge bg-secondary rounded-pill">{{ pkg.hotel_mekkah }}</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Hotel Madinah
+          <span class="badge bg-secondary rounded-pill">{{ pkg.hotel_madinah }}</span>
+        </li>
+      </ul>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h6 class="card-title fw-bold">Kalkulator Estimasi Biaya</h6>
+          <div class="mb-3">
+            <label for="jumlahJamaah" class="form-label">Jumlah Jamaah</label>
+            <input type="number" class="form-control" id="jumlahJamaah" value="1" min="1">
+          </div>
+          <div class="mb-3">
+            <label for="tipeKamar" class="form-label">Tipe Kamar</label>
+            <select class="form-select" id="tipeKamar">
+              <option value="0" selected>Quad (Berempat)</option>
+              <option value="1500000">Triple (Bertiga)</option>
+              <option value="3000000">Double (Berdua)</option>
+            </select>
+          </div>
+          <div class="text-end">
+            <p class="mb-1">Estimasi Total:</p>
+            <h4 id="totalBiaya" class="fw-bold text-primary" data-harga-dasar="{{ pkg.harga }}">{{ pkg.harga_str }}</h4>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="fw-bold">Rencana Perjalanan (Itinerary)</h3>
+      <hr>
+      <ul>
+        {% for item in pkg.itinerary %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

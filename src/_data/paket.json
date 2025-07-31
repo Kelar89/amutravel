@@ -1,0 +1,90 @@
+[
+  {
+    "id": "umroh-berkah-awal-musim",
+    "nama": "Umroh Berkah Awal Musim",
+    "durasi": "9 Hari",
+    "keberangkatan": "15 Oktober 2025",
+    "harga": 28500000,
+    "harga_str": "Rp 28.500.000",
+    "maskapai": "Saudia Airlines (Langsung)",
+    "hotel_mekkah": "Bintang 4 (± 300m dari Masjidil Haram)",
+    "hotel_madinah": "Bintang 4 (± 150m dari Masjid Nabawi)",
+    "image_url": "https://picsum.photos/800/600?random=1",
+    "itinerary": [
+      "Hari 1: Keberangkatan dari Jakarta menuju Jeddah.",
+      "Hari 2: Tiba di Jeddah, melanjutkan perjalanan ke Madinah, check-in hotel.",
+      "Hari 3: Ziarah di sekitar kota Madinah (Masjid Quba, Jabal Uhud).",
+      "Hari 4: Memperbanyak ibadah di Masjid Nabawi.",
+      "Hari 5: Perjalanan ke Makkah, mengambil miqat, melaksanakan Umroh.",
+      "Hari 6: Memperbanyak ibadah di Masjidil Haram.",
+      "Hari 7: Ziarah di sekitar kota Makkah (Jabal Tsur, Arafah).",
+      "Hari 8: Tawaf Wada', check-out, menuju Jeddah.",
+      "Hari 9: Penerbangan kembali ke Jakarta."
+    ]
+  },
+  {
+    "id": "umroh-spesial-milad",
+    "nama": "Umroh Spesial Milad",
+    "durasi": "12 Hari",
+    "keberangkatan": "24 Desember 2025",
+    "harga": 35000000,
+    "harga_str": "Rp 35.000.000",
+    "maskapai": "Garuda Indonesia (Langsung)",
+    "hotel_mekkah": "Bintang 5 (± 100m dari Masjidil Haram)",
+    "hotel_madinah": "Bintang 5 (± 50m dari Masjid Nabawi)",
+    "image_url": "https://picsum.photos/800/600?random=2",
+    "itinerary": [
+      "Hari 1-4: Fokus ibadah dan ziarah di Madinah Al-Munawwarah.",
+      "Hari 5-10: Ibadah Umroh dan memperbanyak amalan di Makkah Al-Mukarramah.",
+      "Hari 11: City tour Jeddah.",
+      "Hari 12: Penerbangan kembali ke Jakarta."
+    ]
+  },
+  {
+    "id": "umroh-keluarga-hemat",
+    "nama": "Umroh Keluarga Hemat",
+    "durasi": "9 Hari",
+    "keberangkatan": "20 Januari 2026",
+    "harga": 27000000,
+    "harga_str": "Rp 27.000.000",
+    "maskapai": "Lion Air",
+    "hotel_mekkah": "Bintang 3 (± 500m dari Masjidil Haram)",
+    "hotel_madinah": "Bintang 3 (± 300m dari Masjid Nabawi)",
+    "image_url": "https://picsum.photos/800/600?random=3",
+    "itinerary": [
+      "Rencana perjalanan standar 9 hari dengan fokus pada efisiensi biaya tanpa mengurangi kekhusyukan ibadah."
+    ]
+  },
+  {
+    "id": "umroh-plus-turki",
+    "nama": "Umroh Plus Turki",
+    "durasi": "13 Hari",
+    "keberangkatan": "10 Maret 2026",
+    "harga": 42000000,
+    "harga_str": "Rp 42.000.000",
+    "maskapai": "Turkish Airlines",
+    "hotel_mekkah": "Bintang 5",
+    "hotel_madinah": "Bintang 5",
+    "image_url": "https://picsum.photos/800/600?random=4",
+    "itinerary": [
+      "Hari 1-3: Menjelajahi keindahan Istanbul dan Bursa, Turki.",
+      "Hari 4-12: Melaksanakan ibadah Umroh di Madinah dan Makkah.",
+      "Hari 13: Kembali ke tanah air."
+    ]
+  },
+  {
+    "id": "umroh-ramadhan",
+    "nama": "Umroh Ramadhan",
+    "durasi": "10 Hari Awal",
+    "keberangkatan": "5 April 2026",
+    "harga": 45500000,
+    "harga_str": "Rp 45.500.000",
+    "maskapai": "Saudia Airlines (Langsung)",
+    "hotel_mekkah": "Bintang 5",
+    "hotel_madinah": "Bintang 5",
+    "image_url": "https://picsum.photos/800/600?random=5",
+    "itinerary": [
+      "Rasakan pengalaman spiritual puasa di 10 hari awal Ramadhan di Tanah Suci."
+    ]
+  }
+]

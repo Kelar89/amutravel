@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ pkg.nama }} | AMU Travel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="/amutravel/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="/amutravel/">AMU Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/amutravel/">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/amutravel/paket/">Paket Umroh</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/amutravel/tentang/">Tentang Kami</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/amutravel/kontak/">Kontak</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/amutravel/galeri/">Galeri</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-7">
+      <img src="https://picsum.photos/800/600?random=2" alt="Umroh Spesial Milad" class="img-fluid rounded shadow mb-4">
+    </div>
+    <div class="col-lg-5">
+      <h1 class="fw-bold">Umroh Spesial Milad</h1>
+      <h2 class="text-primary fw-bold">Rp 35.000.000</h2>
+      <p class="text-muted">Untuk keberangkatan tanggal 24 Desember 2025</p>
+
+      <div class="card bg-light border-0 shadow-sm mb-4">
+        <div class="card-body text-center">
+          <h6 class="card-title">Sisa Waktu Pendaftaran</h6>
+          <div 
+            id="countdown-timer" 
+            class="d-flex justify-content-center fw-bold fs-5" 
+            data-end-date="2025-12-24">
+            </div>
+        </div>
+      </div>
+      <a href="https://wa.me/6285894448143?text=Assalamualaikum,%20saya%20tertarik%20dengan%20Paket%20Umroh%20Spesial%20Milad" target="_blank" class="btn btn-success btn-lg w-100 mb-4">
+        Daftar via WhatsApp Sekarang
+      </a>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Durasi
+          <span class="badge bg-primary rounded-pill">12 Hari</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Maskapai
+          <span class="badge bg-primary rounded-pill">Garuda Indonesia (Langsung)</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Hotel Makkah
+          <span class="badge bg-secondary rounded-pill">Bintang 5 (± 100m dari Masjidil Haram)</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          Hotel Madinah
+          <span class="badge bg-secondary rounded-pill">Bintang 5 (± 50m dari Masjid Nabawi)</span>
+        </li>
+      </ul>
+
+      <div class="card mt-4">
+        <div class="card-body">
+          <h6 class="card-title fw-bold">Kalkulator Estimasi Biaya</h6>
+          <div class="mb-3">
+            <label for="jumlahJamaah" class="form-label">Jumlah Jamaah</label>
+            <input type="number" class="form-control" id="jumlahJamaah" value="1" min="1">
+          </div>
+          <div class="mb-3">
+            <label for="tipeKamar" class="form-label">Tipe Kamar</label>
+            <select class="form-select" id="tipeKamar">
+              <option value="0" selected>Quad (Berempat)</option>
+              <option value="1500000">Triple (Bertiga)</option>
+              <option value="3000000">Double (Berdua)</option>
+            </select>
+          </div>
+          <div class="text-end">
+            <p class="mb-1">Estimasi Total:</p>
+            <h4 id="totalBiaya" class="fw-bold text-primary" data-harga-dasar="35000000">Rp 35.000.000</h4>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="fw-bold">Rencana Perjalanan (Itinerary)</h3>
+      <hr>
+      <ul>
+        
+          <li>Hari 1-4: Fokus ibadah dan ziarah di Madinah Al-Munawwarah.</li>
+        
+          <li>Hari 5-10: Ibadah Umroh dan memperbanyak amalan di Makkah Al-Mukarramah.</li>
+        
+          <li>Hari 11: City tour Jeddah.</li>
+        
+          <li>Hari 12: Penerbangan kembali ke Jakarta.</li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $('#tabel-paket').DataTable({
+          "language": {
+            "url": "https://cdn.datatables.net/plug-ins/2.0.8/i18n/id.json"
+          }
+        });
+      });
+    </script>
+
+    <script>
+      const countdownElement = document.getElementById('countdown-timer');
+      if (countdownElement) {
+        const endDate = new Date(countdownElement.dataset.endDate).getTime();
+        const interval = setInterval(function() {
+          const now = new Date().getTime();
+          const distance = endDate - now;
+          if (distance < 0) {
+            clearInterval(interval);
+            countdownElement.innerHTML = "PENDAFTARAN DITUTUP";
+            return;
+          }
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          countdownElement.innerHTML = `
+            <div class='text-center mx-2'><span>${days}</span><div>Hari</div></div>
+            <div class='text-center mx-2'><span>${hours}</span><div>Jam</div></div>
+            <div class='text-center mx-2'><span>${minutes}</span><div>Menit</div></div>
+            <div class='text-center mx-2'><span>${seconds}</span><div>Detik</div></div>
+          `;
+        }, 1000);
+      }
+    </script>
+
+    <script>
+      const jumlahJamaahEl = document.getElementById('jumlahJamaah');
+      const tipeKamarEl = document.getElementById('tipeKamar');
+      const totalBiayaEl = document.getElementById('totalBiaya');
+
+      if (jumlahJamaahEl && tipeKamarEl && totalBiayaEl) {
+        const hargaDasar = parseFloat(totalBiayaEl.dataset.hargaDasar);
+
+        function hitungTotal() {
+          const jumlah = parseInt(jumlahJamaahEl.value);
+          const tambahanKamar = parseFloat(tipeKamarEl.value);
+          const total = (hargaDasar + tambahanKamar) * jumlah;
+          totalBiayaEl.textContent = 'Rp ' + total.toLocaleString('id-ID');
+        }
+
+        jumlahJamaahEl.addEventListener('input', hitungTotal);
+        tipeKamarEl.addEventListener('change', hitungTotal);
+      }
+    </script>
+
+  </body>
+</html>

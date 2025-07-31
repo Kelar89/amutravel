@@ -7,7 +7,7 @@ layout: "base.njk"
   <div class="container">
     <h1 class="display-4 fw-bold">Wujudkan Niat Suci Anda ke Baitullah</h1>
     <p class="lead col-md-8 mx-auto">Bersama AMU Travel, kami layani perjalanan ibadah Anda dengan sepenuh hati, aman, dan nyaman.</p>
-    <a href="#paket" class="btn btn-primary btn-lg mt-3">Lihat Paket Unggulan</a>
+    <a href="{{ '/paket/' | url }}" class="btn btn-primary btn-lg mt-3">Lihat Semua Paket</a>
   </div>
 </header>
 
@@ -18,48 +18,22 @@ layout: "base.njk"
       <p class="text-muted">Pilihan terbaik untuk perjalanan ibadah Anda.</p>
     </div>
     <div class="row">
+      {%- for p in paket | slice(0, 3) -%}
       <div class="col-lg-4 col-md-6 mb-4">
         <div class="card h-100 shadow-sm">
-          <img src="https://picsum.photos/400/250?random=1" class="card-img-top" alt="Paket Umroh">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Umroh Berkah Awal Musim</h5>
-            <p class="card-text text-muted">9 Hari | Keberangkatan Oktober 2025</p>
-            <h4 class="fw-bold text-primary">Rp 28.500.000</h4>
-            <p class="card-text">Hotel bintang 4 dekat masjid, penerbangan langsung, dan dibimbing oleh muthawwif berpengalaman.</p>
+          <img src="{{ p.image_url | replace('800/600', '400/250') }}" class="card-img-top" alt="{{ p.nama }}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">{{ p.nama }}</h5>
+            <p class="card-text text-muted">{{ p.durasi }} | {{ p.keberangkatan }}</p>
+            <h4 class="fw-bold text-primary">{{ p.harga_str }}</h4>
+            <p class="card-text mt-2">Hotel bintang 5, penerbangan langsung, dan dibimbing oleh muthawwif berpengalaman.</p>
           </div>
-          <div class="card-footer bg-white border-0 pb-3">
-            <a href="https://wa.me/6281234567890?text=Assalamualaikum%2C%20saya%20tertarik%20dengan%20Paket%20Umroh%20Berkah%20Awal%20Musim." class="btn btn-success w-100">Daftar via WhatsApp</a>
+          <div class="card-footer bg-white border-0 pb-3 mt-auto">
+            <a href="{{ metadata.pathPrefix }}paket/{{ p.id }}/" class="btn btn-primary w-100">Lihat Detail</a>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="https://picsum.photos/400/250?random=2" class="card-img-top" alt="Paket Umroh">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Umroh Spesial Milad</h5>
-            <p class="card-text text-muted">12 Hari | Keberangkatan Desember 2025</p>
-            <h4 class="fw-bold text-primary">Rp 35.000.000</h4>
-            <p class="card-text">Nikmati pergantian tahun di Tanah Suci dengan fasilitas hotel bintang 5 dan city tour eksklusif.</p>
-          </div>
-          <div class="card-footer bg-white border-0 pb-3">
-             <a href="https://wa.me/6281234567890?text=Assalamualaikum%2C%20saya%20tertarik%20dengan%20Paket%20Umroh%20Spesial%20Milad." class="btn btn-success w-100">Daftar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="https://picsum.photos/400/250?random=3" class="card-img-top" alt="Paket Umroh">
-          <div class="card-body">
-            <h5 class="card-title fw-bold">Umroh Keluarga Hemat</h5>
-            <p class="card-text text-muted">9 Hari | Keberangkatan Januari 2026</p>
-            <h4 class="fw-bold text-primary">Rp 27.000.000</h4>
-            <p class="card-text">Harga terbaik untuk Anda dan keluarga. Kamar Quad dengan fasilitas lengkap dan nyaman.</p>
-          </div>
-          <div class="card-footer bg-white border-0 pb-3">
-             <a href="https://wa.me/6281234567890?text=Assalamualaikum%2C%20saya%20tertarik%20dengan%20Paket%20Umroh%20Keluarga%20Hemat." class="btn btn-success w-100">Daftar via WhatsApp</a>
-          </div>
-        </div>
-      </div>
+      {%- endfor -%}
     </div>
   </div>
 </section>
@@ -88,6 +62,6 @@ layout: "base.njk"
 
 <footer class="py-4 bg-dark text-white text-center">
     <div class="container">
-        <p class="mb-0">Copyright &copy; AMU Travel 2025</p>
+        <p class="mb-0">Copyright © AMU Travel 2025</p>
     </div>
 </footer>
