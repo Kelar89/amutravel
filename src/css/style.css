@@ -1,0 +1,20 @@
+/* File: src/css/style.css */
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://picsum.photos/1200/800?blur=5&random=10');
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
