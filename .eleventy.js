@@ -1,15 +1,18 @@
-// File: .eleventy.js
+// File: .eleventy.js (Versi baru)
+const { pathPrefix } = require("./src/_data/metadata.json");
 
 module.exports = function(eleventyConfig) {
-  // Perintahkan Eleventy untuk mem-passthrough file CSS kita
+  // Perintahkan Eleventy untuk mem-passthrough file CSS & img
   eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/img"); // Kita buat folder img untuk nanti
+  eleventyConfig.addPassthroughCopy("src/img");
 
   return {
+    // Set pathPrefix agar semua URL aset menjadi benar
+    pathPrefix: pathPrefix,
     dir: {
       input: "src",
-      output: "docs", // Arahkan output ke folder 'docs' untuk GitHub Pages
-      includes: "_includes" // Folder untuk template/layout
+      output: "docs",
+      includes: "_includes"
     },
     templateFormats: ["html", "md", "njk"],
     htmlTemplateEngine: "njk",
